@@ -1,0 +1,13 @@
+---
+#a description of aws ec2 instance
+instance: 
+  ami: ami-a4dc46db
+  init: None
+  role: arn:aws:iam::400029180276:instance-profile/swarm_access
+  region: us-east-1a
+  type: t2.micro
+  securityId: ['sg-9569addf']
+  key: DLNAkey
+  securityGroup: ['HTTP_HTTPS']
+  name: swarm-leader
+

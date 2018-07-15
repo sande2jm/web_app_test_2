@@ -1,0 +1,13 @@
+sudo vi /etc/apache2/sites-enabled/000-default.conf
+
+WSGIDaemonProcess flaskproject threads=5
+WSGIScriptAlias / /var/www/html/flaskproject/app.wsgi
+
+<Directory flaskproject>
+	WSGIProcessGroup flaskproject
+	WSGIApplicationGroup %{GLOBAL}
+	Order deny,allow
+	Allow from all
+</Directory>
+
+sudo apachectl restart
